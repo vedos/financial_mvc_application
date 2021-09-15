@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\korisnik\\source\\repos\\WebApp\\WebApp\\WebApp.csproj": {}
+    "C:\\Users\\vedo_\\Source\\Repos\\financial_mvc_application\\WebApp\\WebApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\korisnik\\source\\repos\\WebApp\\WebApp\\WebApp.csproj": {
+    "C:\\Users\\vedo_\\Source\\Repos\\financial_mvc_application\\WebApp\\WebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\korisnik\\source\\repos\\WebApp\\WebApp\\WebApp.csproj",
+        "projectUniqueName": "C:\\Users\\vedo_\\Source\\Repos\\financial_mvc_application\\WebApp\\WebApp.csproj",
         "projectName": "WebApp",
-        "projectPath": "C:\\Users\\korisnik\\source\\repos\\WebApp\\WebApp\\WebApp.csproj",
-        "packagesPath": "C:\\Users\\korisnik\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\korisnik\\source\\repos\\WebApp\\WebApp\\obj\\",
+        "projectPath": "C:\\Users\\vedo_\\Source\\Repos\\financial_mvc_application\\WebApp\\WebApp.csproj",
+        "packagesPath": "C:\\Users\\vedo_\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vedo_\\Source\\Repos\\financial_mvc_application\\WebApp\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\korisnik\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\vedo_\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -43,6 +39,16 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -61,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

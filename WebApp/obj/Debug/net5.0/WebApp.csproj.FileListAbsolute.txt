@@ -1,0 +1,8 @@
+C:\Users\vedo_\Source\Repos\financial_mvc_application\WebApp\obj\Debug\net5.0\WebApp.csprojAssemblyReference.cache
+C:\Users\vedo_\Source\Repos\financial_mvc_application\WebApp\obj\Debug\net5.0\WebApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vedo_\Source\Repos\financial_mvc_application\WebApp\obj\Debug\net5.0\WebApp.AssemblyInfoInputs.cache
+C:\Users\vedo_\Source\Repos\financial_mvc_application\WebApp\obj\Debug\net5.0\WebApp.AssemblyInfo.cs
+C:\Users\vedo_\Source\Repos\financial_mvc_application\WebApp\obj\Debug\net5.0\WebApp.csproj.CoreCompileInputs.cache
+C:\Users\vedo_\Source\Repos\financial_mvc_application\WebApp\obj\Debug\net5.0\WebApp.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\vedo_\Source\Repos\financial_mvc_application\WebApp\obj\Debug\net5.0\WebApp.RazorAssemblyInfo.cache
+C:\Users\vedo_\Source\Repos\financial_mvc_application\WebApp\obj\Debug\net5.0\WebApp.RazorAssemblyInfo.cs
