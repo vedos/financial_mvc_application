@@ -1,8 +1,39 @@
-﻿@{
+﻿@using WebApp.Models
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    @foreach (Partner x in Model)
+    {
+        <div style="color:black; border-top:1px solid;">
+            <p style="font-weight:700;">
+                @x.Name
+            </p>
+            <p style="text-align:right;font-weight:100;">
+                @x.FeePercent
+            </p>
+        </div>
+    }
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Partner</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td></td>
+            </tr>
+       </tbody>
+    </table>
+
 </div>

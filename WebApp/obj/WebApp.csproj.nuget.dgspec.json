@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vedo_\\Source\\Repos\\financial_mvc_application\\WebApp\\WebApp.csproj": {}
+    "C:\\Users\\X240\\source\\repos\\financial_mvc_application\\WebApp\\WebApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vedo_\\Source\\Repos\\financial_mvc_application\\WebApp\\WebApp.csproj": {
+    "C:\\Users\\X240\\source\\repos\\financial_mvc_application\\WebApp\\WebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vedo_\\Source\\Repos\\financial_mvc_application\\WebApp\\WebApp.csproj",
+        "projectUniqueName": "C:\\Users\\X240\\source\\repos\\financial_mvc_application\\WebApp\\WebApp.csproj",
         "projectName": "WebApp",
-        "projectPath": "C:\\Users\\vedo_\\Source\\Repos\\financial_mvc_application\\WebApp\\WebApp.csproj",
-        "packagesPath": "C:\\Users\\vedo_\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vedo_\\Source\\Repos\\financial_mvc_application\\WebApp\\obj\\",
+        "projectPath": "C:\\Users\\X240\\source\\repos\\financial_mvc_application\\WebApp\\WebApp.csproj",
+        "packagesPath": "C:\\Users\\X240\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\X240\\source\\repos\\financial_mvc_application\\WebApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\vedo_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\X240\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -67,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

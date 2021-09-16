@@ -6,6 +6,7 @@ using Microsoft.Extensions.Hosting;
 using WebApp.DbCtx;
 using Microsoft.EntityFrameworkCore;
 using System;
+using WebApp.Models;
 
 namespace WebApp
 {
@@ -62,6 +63,94 @@ namespace WebApp
         private static void AddTestData(DataContext context)
         {
             //Add Test Data
+
+            var partner1 = new Partner
+            {
+                Id = 1,
+                Name = "Partner1",
+                FeePercent = 0.1m  
+            };
+
+            var partner2 = new Partner
+            {
+                Id = 2,
+                Name = "Partner2",
+                FeePercent = 0.2m,
+                PartnerParentId = 1
+            };
+
+            var partner3 = new Partner
+            {
+                Id = 3,
+                Name = "Partner3",
+                FeePercent = 0.3m,
+                PartnerParentId = 2
+            };
+
+            var partner4 = new Partner
+            {
+                Id = 4,
+                Name = "Partner4",
+                FeePercent = 0.4m
+            };
+
+            var partner5 = new Partner
+            {
+                Id = 5,
+                Name = "Partner5",
+                FeePercent = 0.5m,
+                PartnerParentId = 2
+            };
+
+            var partner6 = new Partner
+            {
+                Id = 6,
+                Name = "Partner6",
+                FeePercent = 0.3m,
+                PartnerParentId = 5
+            };
+
+            var partner7 = new Partner
+            {
+                Id = 7,
+                Name = "Partner7",
+                FeePercent = 0.1m
+            };
+
+            var partner8 = new Partner
+            {
+                Id = 8,
+                Name = "Partner8",
+                FeePercent = 0.3m
+            };
+
+            var partner9 = new Partner
+            {
+                Id = 9,
+                Name = "Partner9",
+                FeePercent = 0.25m,
+                PartnerParentId = 8
+            };
+
+            var partner10 = new Partner
+            {
+                Id = 10,
+                Name = "Partner10",
+                FeePercent = 0.5m
+            };
+
+            context.Partners.Add(partner1);
+            context.Partners.Add(partner2);
+            context.Partners.Add(partner3);
+            context.Partners.Add(partner4);
+            context.Partners.Add(partner5);
+            context.Partners.Add(partner6);
+            context.Partners.Add(partner7);
+            context.Partners.Add(partner8);
+            context.Partners.Add(partner9);
+            context.Partners.Add(partner10);
+
+            context.SaveChanges();
         }
     }
 }
