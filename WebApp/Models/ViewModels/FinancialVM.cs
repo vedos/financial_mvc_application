@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace WebApp.Models
+namespace WebApp.Models.ViewModels
 {
     public class FinancialVM
     {

@@ -8,6 +8,7 @@ using System.Diagnostics;
 using System.Linq;
 using WebApp.DbCtx;
 using WebApp.Models;
+using WebApp.Models.ViewModels;
 
 namespace WebApp.Controllers
 {
