@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\X240\\source\\repos\\financial_mvc_application\\WebApp\\WebApp.csproj": {}
+    "C:\\Users\\vedo_\\Source\\Repos\\financial_mvc_application\\WebApp\\WebApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\X240\\source\\repos\\financial_mvc_application\\WebApp\\WebApp.csproj": {
+    "C:\\Users\\vedo_\\Source\\Repos\\financial_mvc_application\\WebApp\\WebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\X240\\source\\repos\\financial_mvc_application\\WebApp\\WebApp.csproj",
+        "projectUniqueName": "C:\\Users\\vedo_\\Source\\Repos\\financial_mvc_application\\WebApp\\WebApp.csproj",
         "projectName": "WebApp",
-        "projectPath": "C:\\Users\\X240\\source\\repos\\financial_mvc_application\\WebApp\\WebApp.csproj",
-        "packagesPath": "C:\\Users\\X240\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\X240\\source\\repos\\financial_mvc_application\\WebApp\\obj\\",
+        "projectPath": "C:\\Users\\vedo_\\Source\\Repos\\financial_mvc_application\\WebApp\\WebApp.csproj",
+        "packagesPath": "C:\\Users\\vedo_\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vedo_\\Source\\Repos\\financial_mvc_application\\WebApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\X240\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\vedo_\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,6 +40,18 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
+            "Microsoft.AspNetCore.Mvc.DataAnnotations": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.10, )"
@@ -47,6 +59,14 @@
             "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
               "version": "[5.0.10, )"
+            },
+            "Microsoft.jQuery.Unobtrusive.Ajax": {
+              "target": "Package",
+              "version": "[3.2.6, )"
+            },
+            "jQuery": {
+              "target": "Package",
+              "version": "[3.6.0, )"
             }
           },
           "imports": [
@@ -67,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

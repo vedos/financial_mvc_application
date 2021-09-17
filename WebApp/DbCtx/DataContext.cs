@@ -9,10 +9,16 @@ namespace WebApp.DbCtx
         {
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Partner>();
+            modelBuilder.Entity<FinancialItem>();
+        }
 
         public DbSet<FinancialItem> FinancialItems { get; set; }
 
         public DbSet<Partner> Partners { get; set; }
     }
-
 }

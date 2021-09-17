@@ -1,22 +1,10 @@
 ﻿@using WebApp.Models
-
+@model WebApp.Models.FinancialVM
 @{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    @foreach (Partner x in Model)
-    {
-        <div style="color:black; border-top:1px solid;">
-            <p style="font-weight:700;">
-                @x.Name
-            </p>
-            <p style="text-align:right;font-weight:100;">
-                @x.FeePercent
-            </p>
-        </div>
-    }
-
     <table class="table">
         <thead>
             <tr>
@@ -24,16 +12,57 @@
                 <th scope="col">Partner</th>
                 <th scope="col">Amount</th>
                 <th scope="col">Date</th>
+                <th scope="col">Actions</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td></td>
-            </tr>
-       </tbody>
+            @foreach (FinancialVM.FinancialItemVM x in Model.financialItems)
+            {
+                <tr>
+                    <th scope="row">1</th>
+                    <td>@x.Partner.Name</td>
+                    <td>@x.Amount</td>
+                    <td>@x.Date.ToShortDateString()</td>
+                    <td>
+                        <a href="Home/Delete?ID=@x.Id" class="btn btn-danger" id="delete_@x.Id" onclick="return Submit(this.id)">Remove</a>
+                        <a href="#" class="btn btn-info" id="edit_@x.Id" data-toggle="collapse" onclick="return Edit(@x.Id)">Edit</a>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
     </table>
 
 </div>
+
+
+<p>
+    <a class="btn btn-primary" data-toggle="collapse" href="#" role="button" aria-expanded="false" aria-controls="collapseExample" onclick="return Edit(0)">
+        Add
+    </a>
+</p>
+<div class="collapse col-md-6" id="collapseExample">
+    <div class="card card-body ">
+        <div id="divAdd" class="form-group">
+            <!--place for Add partial-->
+        </div>
+    </div>
+</div>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">
+    function Submit(id) {
+        if (confirm("Do you really want to delete this?")) {
+            return true;
+        }
+        else {
+            return false;
+        }
+        return true;
+    }
+
+    function Edit(value) {
+        $('#divAdd').load('/Home/Edit?Id=' + value);
+        $('#collapseExample').collapse();
+    }
+</script>

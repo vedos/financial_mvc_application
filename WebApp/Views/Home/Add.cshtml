@@ -1,0 +1,26 @@
+﻿@{
+    Layout = "";
+}
+@model WebApp.Models.FinancialEditVM
+
+
+<form asp-action="Save" asp-controller="Home" method="POST" data-ajax="true" data-ajax-update="divAdd" id="formAdd">
+    <!-- form content-->
+    @Html.HiddenFor(model => model.Id)
+
+    <div class="form-group">
+        @Html.TextBoxFor(model => model.Amount, new { @class = "form-control", @id = "inputAmount", @placeholder = "Amount", @type = "number" })
+
+    </div>
+
+    <div class="form-group">
+        @Html.TextBoxFor(model => model.Date, "{0:yyyy-MM-dd}", new { @class = "form-control", @id = "datepicker", @placeholder = "Datum", type = "date" })
+
+    </div>
+
+
+    @Html.DropDownListFor(m => m.PartnerId, Model.partners, new { @class = "form-control" })
+    <div class="form-group">
+        <input type="submit" class="btn btn-warning" value="Save" style="margin-top: 5px;" />
+    </div>
+</form>

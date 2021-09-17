@@ -1,8 +1,12 @@
-﻿namespace WebApp.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace WebApp.Models
 {
-    public class Partner
+    public class Partner: IEntity
     {
-        public decimal Id { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Id { get; set; }
+
         public Partner PartnerParent { get; set; }
 
         public decimal PartnerParentId { get; set; }
