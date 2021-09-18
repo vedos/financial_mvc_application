@@ -39,6 +39,7 @@
           "Microsoft.EntityFrameworkCore": "5.0.10",
           "Microsoft.EntityFrameworkCore.InMemory": "5.0.10",
           "Microsoft.jQuery.Unobtrusive.Ajax": "3.2.6",
+          "bootstrap-treeview": "1.2.0",
           "jQuery": "3.6.0",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions.Reference": "5.0.0.0",
@@ -327,6 +328,17 @@
         },
         "compile": {
           "WebApp.dll": {}
+        }
+      },
+      "bootstrap/3.3.4": {
+        "dependencies": {
+          "jQuery": "3.6.0"
+        }
+      },
+      "bootstrap-treeview/1.2.0": {
+        "dependencies": {
+          "bootstrap": "3.3.4",
+          "jQuery": "3.6.0"
         }
       },
       "EntityFramework/6.4.4": {
@@ -2849,6 +2861,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "bootstrap/3.3.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-EoMvrleltlW75EILYvVv9XipE50o5BGJ2kALSNxFlY3ZzY2cyuKaXOU9X5snh81ssN0VZymERzYZH9Y81cJWkQ==",
+      "path": "bootstrap/3.3.4",
+      "hashPath": "bootstrap.3.3.4.nupkg.sha512"
+    },
+    "bootstrap-treeview/1.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-etzNBJvu5bDTeXgFQ4eDdIgcAFPxBrmuK/+DcwwhFOi+Gsv5OEgUiBek5z//5/bUwupp3RxDaxZabdj3Zkpfag==",
+      "path": "bootstrap-treeview/1.2.0",
+      "hashPath": "bootstrap-treeview.1.2.0.nupkg.sha512"
     },
     "EntityFramework/6.4.4": {
       "type": "package",

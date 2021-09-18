@@ -7,11 +7,13 @@ namespace WebApp.DbCtx
     {
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
+
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
 
             modelBuilder.Entity<Partner>();
             modelBuilder.Entity<FinancialItem>();

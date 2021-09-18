@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebApp.Models
 {
@@ -6,13 +7,13 @@ namespace WebApp.Models
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-
         public Partner PartnerParent { get; set; }
-
-        public decimal PartnerParentId { get; set; }
-
+        public int? PartnerParentId { get; set; }
         public decimal FeePercent { get; set; }
         public string Name { get; set; }
+
+        public virtual ICollection<FinancialItem> FinancialItems { get; set; }
+        public virtual Partner Children { get; set; }
 
     }
 }

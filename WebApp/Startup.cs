@@ -87,14 +87,14 @@ namespace WebApp
             var partner4 = new Partner
             {
                 Name = "Partner4",
-                FeePercent = 0.4m
+                FeePercent = 0.4m,
+                PartnerParentId = 3
             };
 
             var partner5 = new Partner
             {
                 Name = "Partner5",
-                FeePercent = 0.5m,
-                PartnerParentId = 2
+                FeePercent = 0.5m
             };
 
             var partner6 = new Partner
@@ -141,10 +141,18 @@ namespace WebApp
             context.Partners.Add(partner10);
 
             context.FinancialItems.Add(new FinancialItem {
-                Amount = 0,
+                Amount = 10,
                 Date = DateTime.Now,
                 Partner = partner1,
                 PartnerId = partner1.Id
+            });
+
+            context.FinancialItems.Add(new FinancialItem
+            {
+                Amount = 5,
+                Date = DateTime.Now,
+                Partner = partner4,
+                PartnerId = partner4.Id
             });
 
             context.SaveChanges();

@@ -1,0 +1,47 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@using WebApp.Models.ViewModels
+@model WebApp.Models.ViewModels.PartnerVM
+
+
+
+<style>
+    .treegrid-indent {
+        width: 0px;
+        height: 16px;
+        display: inline-block;
+        position: relative;
+    }
+
+    .treegrid-expander {
+        width: 0px;
+        height: 16px;
+        display: inline-block;
+        position: relative;
+        left: -17px;
+        cursor: pointer;
+    }
+</style>
+
+<div class="container">
+    <table id="tree-table" class="table table-hover table-bordered">
+        <tbody>
+        <th>Partner</th>
+        <th>Total shopping amount</th>
+        <th>Team shopping amount</th>
+        <th>Total commision</th>
+
+        @foreach (PartnerVM.PartnerInfo item in Model.treePartners)
+        {
+            <tr data-id="@item.Id" data-parent="@item.PartnerParentId" data-level="@item.Level">
+                <td data-column="name">@item.Name</td>
+                <td>@item.TotalShoppingAmount</td>
+                <td>@item.TotalTeamAmount</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

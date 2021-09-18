@@ -25,26 +25,24 @@ namespace WebApp.Controllers
 
         public IActionResult Index()
         {
-            FinancialVM model = new FinancialVM {
-                financialItems = _ctx.FinancialItems.Include(x => x.Partner).Select(x => new FinancialVM.FinancialItemVM {
+            FinancialVM model = new FinancialVM
+            {
+                financialItems = _ctx.FinancialItems.Include(x => x.Partner).Select(x => new FinancialVM.FinancialItemVM
+                {
                     Amount = x.Amount,
                     Date = x.Date,
                     Id = x.Id,
                     Partner = x.Partner,
                     PartnerId = x.PartnerId
                 }).ToList(),
-                financialEdit = new FinancialEditVM() {
+                financialEdit = new FinancialEditVM()
+                {
                     Date = DateTime.Now,
                     partners = LoadPartners()
                 }
-        };
-            
-            return View(model);
-        }
+            };
 
-        public IActionResult Privacy()
-        {
-            return View();
+            return View(model);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
@@ -53,12 +51,20 @@ namespace WebApp.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-        public ActionResult Obrisi(int ID)
+        public ActionResult Delete(int ID)
         {
             FinancialItem f = _ctx.FinancialItems.Find(ID);
             _ctx.FinancialItems.Remove(f);
             _ctx.SaveChanges();
 
+
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult DeleteAll()
+        {
+            _ctx.FinancialItems.RemoveRange(_ctx.FinancialItems);
+            _ctx.SaveChanges();
 
             return RedirectToAction("Index");
         }
@@ -71,12 +77,12 @@ namespace WebApp.Controllers
                 {
                     Amount = model.Amount,
                     Date = model.Date,
-
                     Partner = _ctx.Partners.Find(model.PartnerId),
                     PartnerId = model.PartnerId
                 });
             }
-            else {
+            else
+            {
                 var itemDb = _ctx.FinancialItems.Find(model.Id);
                 itemDb.PartnerId = model.PartnerId;
                 itemDb.Amount = model.Amount;
@@ -89,7 +95,7 @@ namespace WebApp.Controllers
 
         public ActionResult Edit(string Id)
         {
-            if(0 == Convert.ToInt32(Id))
+            if (0 == Convert.ToInt32(Id))
                 return PartialView("Add", new FinancialEditVM()
                 {
                     Date = DateTime.Now,
@@ -97,14 +103,15 @@ namespace WebApp.Controllers
                 });
 
 
-            var f = _ctx.FinancialItems.Where(s => s.Id == Convert.ToInt32(Id) ).Select(x => new FinancialEditVM {
+            var f = _ctx.FinancialItems.Where(s => s.Id == Convert.ToInt32(Id)).Select(x => new FinancialEditVM
+            {
                 Amount = x.Amount,
                 Date = x.Date,
                 PartnerId = x.PartnerId,
                 partners = LoadPartners()
             }).FirstOrDefault();
 
-            return PartialView("Add",f);
+            return PartialView("Add", f);
         }
 
         public List<SelectListItem> LoadPartners()

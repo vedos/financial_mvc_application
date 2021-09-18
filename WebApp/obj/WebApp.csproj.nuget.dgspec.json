@@ -64,6 +64,10 @@
               "target": "Package",
               "version": "[3.2.6, )"
             },
+            "bootstrap-treeview": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
             "jQuery": {
               "target": "Package",
               "version": "[3.6.0, )"

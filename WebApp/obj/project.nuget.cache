@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "fifuUR8NLhA47myLLca13LDEZ8RfQNlBXBMBRkXgrVYk2YBIxMejvg6frHAWw8Ut+7jU9ysZUZIpUZIHqT1jjQ==",
+  "dgSpecHash": "T5U91JKKeYVNIWfaTEJ7IjHZ2Z5rf9pDG5jPVdsvB2h8u8ytsPLOZBv6Ibvy0BvgLptZFDgb1L4OKZfTYR+14Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\vedo_\\Source\\Repos\\financial_mvc_application\\WebApp\\WebApp.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\vedo_\\.nuget\\packages\\bootstrap\\3.3.4\\bootstrap.3.3.4.nupkg.sha512",
+    "C:\\Users\\vedo_\\.nuget\\packages\\bootstrap-treeview\\1.2.0\\bootstrap-treeview.1.2.0.nupkg.sha512",
     "C:\\Users\\vedo_\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\vedo_\\.nuget\\packages\\jquery\\3.6.0\\jquery.3.6.0.nupkg.sha512",
     "C:\\Users\\vedo_\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

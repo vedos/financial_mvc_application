@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     "net5.0": {
+      "bootstrap/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "jQuery": "1.9.1"
+        }
+      },
+      "bootstrap-treeview/1.2.0": {
+        "type": "package",
+        "dependencies": {
+          "bootstrap": "3.3.4",
+          "jQuery": "2.1.4"
+        }
+      },
       "EntityFramework/6.4.4": {
         "type": "package",
         "dependencies": {
@@ -1386,6 +1399,47 @@
     }
   },
   "libraries": {
+    "bootstrap/3.3.4": {
+      "sha512": "EoMvrleltlW75EILYvVv9XipE50o5BGJ2kALSNxFlY3ZzY2cyuKaXOU9X5snh81ssN0VZymERzYZH9Y81cJWkQ==",
+      "type": "package",
+      "path": "bootstrap/3.3.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "bootstrap.3.3.4.nupkg.sha512",
+        "bootstrap.nuspec",
+        "content/Content/bootstrap-theme.css",
+        "content/Content/bootstrap-theme.css.map",
+        "content/Content/bootstrap-theme.min.css",
+        "content/Content/bootstrap.css",
+        "content/Content/bootstrap.css.map",
+        "content/Content/bootstrap.min.css",
+        "content/Icon.png",
+        "content/Scripts/bootstrap.js",
+        "content/Scripts/bootstrap.min.js",
+        "content/Scripts/npm.js",
+        "content/fonts/glyphicons-halflings-regular.eot",
+        "content/fonts/glyphicons-halflings-regular.svg",
+        "content/fonts/glyphicons-halflings-regular.ttf",
+        "content/fonts/glyphicons-halflings-regular.woff",
+        "content/fonts/glyphicons-halflings-regular.woff2"
+      ]
+    },
+    "bootstrap-treeview/1.2.0": {
+      "sha512": "etzNBJvu5bDTeXgFQ4eDdIgcAFPxBrmuK/+DcwwhFOi+Gsv5OEgUiBek5z//5/bUwupp3RxDaxZabdj3Zkpfag==",
+      "type": "package",
+      "path": "bootstrap-treeview/1.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "bootstrap-treeview.1.2.0.nupkg.sha512",
+        "bootstrap-treeview.nuspec",
+        "content/Content/bootstrap-treeview.css",
+        "content/Content/bootstrap-treeview.min.css",
+        "content/Scripts/bootstrap-treeview.js",
+        "content/Scripts/bootstrap-treeview.min.js"
+      ]
+    },
     "EntityFramework/6.4.4": {
       "sha512": "yj1+/4tci7Panu3jKDHYizxwVm0Jvm7b7m057b5h4u8NUHGCR8WIWirBTw+8EptRffwftIWPBeIRGNKD1ewEMQ==",
       "type": "package",
@@ -5016,6 +5070,7 @@
       "Microsoft.EntityFrameworkCore >= 5.0.10",
       "Microsoft.EntityFrameworkCore.InMemory >= 5.0.10",
       "Microsoft.jQuery.Unobtrusive.Ajax >= 3.2.6",
+      "bootstrap-treeview >= 1.2.0",
       "jQuery >= 3.6.0"
     ]
   },
@@ -5081,6 +5136,10 @@
           "Microsoft.jQuery.Unobtrusive.Ajax": {
             "target": "Package",
             "version": "[3.2.6, )"
+          },
+          "bootstrap-treeview": {
+            "target": "Package",
+            "version": "[1.2.0, )"
           },
           "jQuery": {
             "target": "Package",
