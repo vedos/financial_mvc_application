@@ -13,7 +13,6 @@ namespace WebApp.Models.ViewModels
             public decimal TotalCommision { get; set; }
             public int? PartnerParentId { get; set; }
             public int Level { get; set; }
-            public int LocationLevel { get; set; }
 
         }
 

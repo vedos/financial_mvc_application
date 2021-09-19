@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System.Linq;
 using WebApp.Models;
 
 namespace WebApp.DbCtx
@@ -24,6 +23,7 @@ namespace WebApp.DbCtx
 
         public DbSet<Partner> Partners { get; set; }
 
+        #region avoid referrence loop
         /*
         /// <summary>  
         /// Overriding Save Changes  
@@ -58,5 +58,6 @@ namespace WebApp.DbCtx
 
             return avoidReferrencinLoop(partner, partnerParent.PartnerParent == null ? partnerParent.PartnerParent : null);
         }*/
+        #endregion
     }
 }
