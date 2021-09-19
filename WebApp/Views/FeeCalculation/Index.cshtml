@@ -36,12 +36,15 @@
 
         @foreach (PartnerVM.PartnerInfo item in Model.treePartners)
         {
+
             <tr data-id="@item.Id" data-parent="@item.PartnerParentId" data-level="@item.Level">
                 <td data-column="name">@item.Name</td>
                 <td>@item.TotalShoppingAmount</td>
                 <td>@item.TotalTeamAmount</td>
+                <td>@item.TotalCommision</td>
             </tr>
         }
         </tbody>
     </table>
 </div>
+

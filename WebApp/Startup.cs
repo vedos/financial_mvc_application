@@ -7,6 +7,7 @@ using WebApp.DbCtx;
 using Microsoft.EntityFrameworkCore;
 using System;
 using WebApp.Models;
+using System.Collections.Generic;
 
 namespace WebApp
 {
@@ -67,28 +68,25 @@ namespace WebApp
             var partner1 = new Partner
             {
                 Name = "Partner1",
-                FeePercent = 0.1m  
+                FeePercent = 0.3m  
             };
 
             var partner2 = new Partner
             {
                 Name = "Partner2",
-                FeePercent = 0.2m,
-                PartnerParentId = 1
+                FeePercent = 0.2m
             };
 
             var partner3 = new Partner
             {
                 Name = "Partner3",
-                FeePercent = 0.3m,
-                PartnerParentId = 2
+                FeePercent = 0.3m
             };
 
             var partner4 = new Partner
             {
                 Name = "Partner4",
-                FeePercent = 0.4m,
-                PartnerParentId = 3
+                FeePercent = 0.2m
             };
 
             var partner5 = new Partner
@@ -100,8 +98,7 @@ namespace WebApp
             var partner6 = new Partner
             {
                 Name = "Partner6",
-                FeePercent = 0.3m,
-                PartnerParentId = 5
+                FeePercent = 0.3m
             };
 
             var partner7 = new Partner
@@ -119,8 +116,7 @@ namespace WebApp
             var partner9 = new Partner
             {
                 Name = "Partner9",
-                FeePercent = 0.25m,
-                PartnerParentId = 8
+                FeePercent = 0.25m
             };
 
             var partner10 = new Partner
@@ -129,33 +125,41 @@ namespace WebApp
                 FeePercent = 0.5m
             };
 
-            context.Partners.Add(partner1);
-            context.Partners.Add(partner2);
-            context.Partners.Add(partner3);
-            context.Partners.Add(partner4);
-            context.Partners.Add(partner5);
-            context.Partners.Add(partner6);
-            context.Partners.Add(partner7);
-            context.Partners.Add(partner8);
-            context.Partners.Add(partner9);
-            context.Partners.Add(partner10);
+            var random = new Random();
+            var list = new List<Partner>() {partner1,partner2,partner3,partner4,partner5, partner6, partner7, partner8, partner9, partner10 };
 
-            context.FinancialItems.Add(new FinancialItem {
-                Amount = 10,
-                Date = DateTime.Now,
-                Partner = partner1,
-                PartnerId = partner1.Id
-            });
-
-            context.FinancialItems.Add(new FinancialItem
+            var randomList = new List<Partner>();
+            foreach (Partner item in list) 
             {
-                Amount = 5,
-                Date = DateTime.Now,
-                Partner = partner4,
-                PartnerId = partner4.Id
-            });
+                int index = random.Next(list.Count);
+
+                item.PartnerParent = list[index];
+
+                if (isUsed(item, list[index]))
+                    item.PartnerParent = list[index];
+                else
+                    item.PartnerParent = null;
+
+                randomList.Add(item);
+            }
+
+
+            context.Partners.AddRange(randomList);
 
             context.SaveChanges();
+        }
+
+        public static bool isUsed(Partner partner, Partner newParent) 
+        {
+            if (newParent == null) 
+                return true;
+
+            if (partner == newParent)
+                return false;
+
+            
+
+            return isUsed(partner, newParent.PartnerParent);
         }
     }
 }

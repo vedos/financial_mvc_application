@@ -20,16 +20,19 @@ $(function () {
 
             expander.on('click', function (e) {
                 var $target = $(e.target);
+                console.log($row[0].rowIndex, children[0].rowIndex);
                 if ($target.hasClass('fa-angle-right')) {
                     $target
                         .removeClass('fa-angle-right')
                         .addClass('fa-angle-down');
 
+                    $('#tree-table > tbody > tr').eq($row[0].rowIndex).after(children);
+
                     children.show();
                 } else {
-                    $target
+                    /*$target
                         .removeClass('fa-angle-down')
-                        .addClass('fa-angle-right');
+                        .addClass('fa-angle-right');*/
 
                     reverseHide($table, $row);
                 }
@@ -37,7 +40,7 @@ $(function () {
         }
 
         $columnName.prepend('' +
-            '<span class="treegrid-indent" style="width:' + 15 * level + 'px"></span>' +
+            '<span class="treegrid-indent" style="width:' + 20 * level + 'px"></span>' +
             '');
     });
 

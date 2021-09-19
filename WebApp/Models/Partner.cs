@@ -13,7 +13,7 @@ namespace WebApp.Models
         public string Name { get; set; }
 
         public virtual ICollection<FinancialItem> FinancialItems { get; set; }
-        public virtual Partner Children { get; set; }
+        public virtual List<Partner> Childrens { get; set; }
 
     }
 }
